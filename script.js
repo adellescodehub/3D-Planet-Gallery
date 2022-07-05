@@ -20,7 +20,7 @@ function loadSun(){
     document.getElementById("radius").innerText = "Radius: " + radius[0];
     document.getElementById("core").innerText = "Core: " + core[0];
 
-    newTexture = new THREE.TextureLoader().load("sun.jpg");
+    newTexture = new THREE.TextureLoader().load("./Resources/sun.jpg");
     planetMaterial.map = newTexture;
     document.getElementById("planetL").innerHTML = "Sun";
     scene.remove(ring);
@@ -33,7 +33,7 @@ function loadMercury(){
     document.getElementById("radius").innerText = "Radius: " + radius[1];
     document.getElementById("core").innerText = "Core: " + core[1];
 
-    newTexture = new THREE.TextureLoader().load("2k_mercury.jpg");
+    newTexture = new THREE.TextureLoader().load("./Resources/2k_mercury.jpg");
     planetMaterial.map = newTexture;
     currPlanet = "mercury";
     document.getElementById("planetL").innerHTML = "Mercury";
@@ -47,7 +47,7 @@ function loadVenus(){
     document.getElementById("radius").innerText = "Radius: " + radius[2];
     document.getElementById("core").innerText = "Core: " + core[2];
 
-    newTexture = new THREE.TextureLoader().load("2k_venus_surface.jpg");
+    newTexture = new THREE.TextureLoader().load("./Resources/2k_venus_surface.jpg");
     planetMaterial.map = newTexture;
     document.getElementById("planetL").innerHTML = "Venus";
     scene.remove(ring);
@@ -60,7 +60,7 @@ function loadEarth(){
     document.getElementById("radius").innerText = "Radius: " + radius[3];
     document.getElementById("core").innerText = "Core: " + core[3];
 
-    newTexture = new THREE.TextureLoader().load("2k_earth_daymap.jpg");
+    newTexture = new THREE.TextureLoader().load("./Resources/2k_earth_daymap.jpg");
     planetMaterial.map = newTexture;
     document.getElementById("planetL").innerHTML = "Earth";
     scene.remove(ring);
@@ -73,7 +73,7 @@ function loadMars(){
     document.getElementById("radius").innerText = "Radius: " + radius[4];
     document.getElementById("core").innerText = "Core: " + core[4];
 
-    newTexture = new THREE.TextureLoader().load("2k_mars.jpg");
+    newTexture = new THREE.TextureLoader().load("./Resources/2k_mars.jpg");
     planetMaterial.map = newTexture;
     document.getElementById("planetL").innerHTML = "Mars";
     scene.remove(ring);
@@ -86,7 +86,7 @@ function loadJupiter(){
     document.getElementById("radius").innerText = "Radius: " + radius[5];
     document.getElementById("core").innerText = "Core: " + core[5];
 
-    newTexture = new THREE.TextureLoader().load("2k_jupiter.jpg");
+    newTexture = new THREE.TextureLoader().load("./Resources/2k_jupiter.jpg");
     planetMaterial.map = newTexture;
     document.getElementById("planetL").innerHTML = "Jupiter";
     scene.remove(ring);
@@ -99,10 +99,10 @@ function loadSaturn(){
     document.getElementById("radius").innerText = "Radius: " + radius[6];
     document.getElementById("core").innerText = "Core: " + core[6];
 
-    newTexture = new THREE.TextureLoader().load("2k_saturn.jpg");
+    newTexture = new THREE.TextureLoader().load("./Resources/2k_saturn.jpg");
     planetMaterial.map = newTexture;
     var ringGeo = new THREE.RingGeometry(3,6,600);
-    var ringTex = new THREE.TextureLoader().load("saturn ring.png");
+    var ringTex = new THREE.TextureLoader().load("./Resources/saturn ring.png");
     var ringMat = new THREE.MeshBasicMaterial({map: ringTex, side:THREE.DoubleSide});
     ring = new THREE.Mesh(ringGeo,ringMat);
     ring.position.x = 0;
@@ -123,10 +123,10 @@ function loadUranus(){
     document.getElementById("core").innerText = "Core: " + core[7];
 
     scene.remove(ring);
-    newTexture = new THREE.TextureLoader().load("2k_uranus.jpg");
+    newTexture = new THREE.TextureLoader().load("./Resources/2k_uranus.jpg");
     planetMaterial.map = newTexture;
     var ringGeo = new THREE.RingGeometry(4,5.5,600);
-    var ringTex = new THREE.TextureLoader().load("uranus ring.png");
+    var ringTex = new THREE.TextureLoader().load("./Resources/uranus ring.png");
     var ringMat = new THREE.MeshBasicMaterial({map: ringTex, side:THREE.DoubleSide});
     ring = new THREE.Mesh(ringGeo,ringMat);
     ring.position.x = 0;
@@ -146,7 +146,7 @@ function loadNeptune(){
     document.getElementById("radius").innerText = "Radius: " + radius[8];
     document.getElementById("core").innerText = "Core: " + core[8];
 
-    newTexture = new THREE.TextureLoader().load("2k_neptune.jpg");
+    newTexture = new THREE.TextureLoader().load("./Resources/2k_neptune.jpg");
     planetMaterial.map = newTexture;
     document.getElementById("planetL").innerHTML = "Neptune";
     scene.remove(ring);
@@ -159,7 +159,7 @@ function loadPluto(){
     document.getElementById("radius").innerText = "Radius: " + radius[9];
     document.getElementById("core").innerText = "Core: " + core[9];
 
-    newTexture = new THREE.TextureLoader().load("2k_pluto.jpg");
+    newTexture = new THREE.TextureLoader().load("./Resources/2k_pluto.jpg");
     planetMaterial.map = newTexture;
     document.getElementById("planetL").innerHTML = "Pluto";
     scene.remove(ring);
@@ -174,7 +174,7 @@ function init() {
     scene = new THREE.Scene();
     
     //planet
-    planetTexture = new THREE.TextureLoader().load("sun.jpg");
+    planetTexture = new THREE.TextureLoader().load("./Resources/sun.jpg");
     planetGeometry = new THREE.SphereGeometry(3, 100, 500 );
     planetMaterial = new THREE.MeshBasicMaterial({ map:planetTexture } );
     planet = new THREE.Mesh( planetGeometry, planetMaterial );
